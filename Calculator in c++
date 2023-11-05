@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main () {
+double a, b;
+    char znak;
+cout<< "Choose a sign (+, -, *, /): " << "\n";
+cin>> znak;
+cout<<"Choose two numbers:"<<"\n";
+cin>> a >> b;
+    switch (znak) {
+        case'+':
+cout<< "The answer is: "<< a + b <<"\n";
+break;
+        case'-':
+        cout<<"The answer is "<< a - b <<"\n";
+        break;
+        case'*':
+        cout<<"The answer is: "<< a * b <<"\n";
+        break;
+        case'/':
+        if( b == 0){
+            cout<< "You cannot divide by zero"<<"\n";
+        }
+        else{
+            cout<<"The answer is:"<< a / b <<"\n";
+        }
+        break;
+        default:
+            cout<<"Invalid sign"<<"\n";
+            break;
+    }
+    return 0;
+
+}
